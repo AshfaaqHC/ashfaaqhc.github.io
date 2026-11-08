@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ashfaaq Curimbaccus — IT Auditor focused on technology risk, IT controls and audit innovation.">
+<meta name="theme-color" content="#071a35">
+<title>Ashfaaq Curimbaccus — IT Audit &amp; Technology Risk</title>
+<style>
+:root{
+  --bg:#071a35;--bg2:#0a2243;--panel:#0d294e;--panel2:#102f59;
+  --text:#f0f5fc;--muted:#b3c3d8;--soft:#d5e2f2;
+  --accent:#8fc5ff;--accent2:#5da7f4;--line:#29496d;
+  --header:rgba(5,19,40,.94);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  margin:0;color:var(--text);background:
+  radial-gradient(circle at 15% 18%,rgba(78,145,218,.10) 0 1px,transparent 2px),
+  linear-gradient(rgba(104,157,211,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(104,157,211,.035) 1px,transparent 1px),
+  radial-gradient(ellipse at 75% -10%,rgba(53,119,190,.23),transparent 44%),
+  linear-gradient(180deg,#071a35 0%,#081d39 58%,#07182f 100%);
+  background-size:34px 34px,34px 34px,34px 34px,auto,auto;
+  font:15px/1.72 Inter,"Segoe UI",system-ui,sans-serif;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:#fff;text-decoration:underline}
+.wrap{width:min(1040px,calc(100% - 44px));margin:auto}
+header{
+  position:sticky;top:0;z-index:1000;background:var(--header);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px)
+}
+.nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{font-size:14px;font-weight:750;letter-spacing:.08em;color:var(--accent);white-space:nowrap;display:inline-flex;align-items:center;gap:10px}
+.brand-dot{width:9px;height:9px;border-radius:50%;background:#5da7f4;box-shadow:0 0 0 4px rgba(93,167,244,.15),0 0 15px rgba(93,167,244,.8);display:inline-block}
+nav{display:flex;gap:23px;align-items:center;flex-wrap:wrap}
+nav a{font-size:11px;letter-spacing:.09em;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.hero{padding:82px 0 45px;position:relative;isolation:isolate}
+.hero:after{content:"ITGC  ·  RISK  ·  CONTROL  ·  ASSURANCE";position:absolute;z-index:-1;right:0;top:76px;width:270px;height:270px;border:1px solid rgba(143,197,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;color:rgba(143,197,255,.16);font:11px Consolas,monospace;letter-spacing:.16em;box-shadow:inset 0 0 0 18px rgba(143,197,255,.018),inset 0 0 0 19px rgba(143,197,255,.08),0 0 70px rgba(75,139,205,.06);transform:rotate(-18deg);pointer-events:none}
+.terminal{display:flex;align-items:center;gap:8px}
+.terminal:after{content:"";display:inline-block;width:8px;height:16px;background:var(--accent);animation:cursorBlink 1s steps(2,start) infinite;vertical-align:middle}
+@keyframes cursorBlink{to{visibility:hidden}}
+.terminal{font:13px/1.5 Consolas,monospace;color:var(--accent)}
+h1{font-size:clamp(39px,7vw,65px);line-height:1.07;letter-spacing:-.045em;margin:16px 0 13px}
+h1 .name{color:#fff}
+.role{font-size:clamp(19px,3vw,25px);font-weight:600;color:var(--accent);margin:0 0 18px}
+.intro{max-width:780px;color:var(--soft);font-size:16px;line-height:1.8}
+.subintro{max-width:760px;color:var(--muted);margin-top:13px}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin:24px 0 0}
+.btn{display:inline-flex;align-items:center;padding:9px 15px;border:1px solid var(--accent2);border-radius:5px;color:var(--accent);font-size:13px}
+.btn.primary{background:var(--accent);color:#071a35;font-weight:700}
+.btn:hover{background:rgba(143,197,255,.12);text-decoration:none}
+.btn.primary:hover{background:#b5d9ff}
+section{padding:40px 0;border-top:1px solid var(--line)}
+.kicker{font:12px Consolas,monospace;color:var(--accent);letter-spacing:.04em}
+h2{font-size:25px;line-height:1.25;margin:6px 0 20px;letter-spacing:-.02em}
+h3{font-size:16px;margin:0 0 6px;color:var(--text)}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.build-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.step{padding:16px 14px;border:1px solid var(--line);background:rgba(13,41,78,.55);border-radius:7px;min-height:112px}
+.step .symbol{font-size:20px;color:var(--accent);display:block;margin-bottom:8px}
+.step strong{display:block;font-size:14px}
+.step span:last-child{font-size:12px;color:var(--muted)}
+.journey{display:grid;gap:14px}
+.job{padding:0 0 17px 18px;border-left:2px solid #4779ad;position:relative}
+.job:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--accent);left:-5px;top:7px;box-shadow:0 0 0 4px var(--bg)}
+.job-meta{font:11px Consolas,monospace;color:var(--accent);letter-spacing:.04em;margin-bottom:5px}
+.job h3{font-size:17px}
+.job p{color:var(--muted);max-width:850px}
+.job ul{padding-left:18px;margin:9px 0 0;color:var(--muted)}
+.job li{margin:5px 0}
+.work-list{display:grid;gap:13px}
+.work{padding:18px 0;border-bottom:1px solid var(--line)}
+.work:last-child{border-bottom:0}
+.work-meta{font:11px Consolas,monospace;color:var(--accent);margin-bottom:5px}
+.work p{color:var(--muted);max-width:850px;margin:6px 0}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.skill-group{padding:16px 0;border-top:1px solid var(--line)}
+.skill-group h3{color:var(--accent);font-size:14px;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;color:var(--soft);border:1px solid var(--line);border-radius:4px;padding:4px 9px;background:rgba(12,38,71,.6)}
+.contact-line{color:var(--muted)}
+footer{padding:24px 0 36px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:700px){
+ .nav{align-items:flex-start;flex-direction:column;padding:12px 0;gap:8px}
+ nav{gap:12px 16px}
+ nav a{font-size:10px}
+ .hero{padding:58px 0 38px}
+ .hero:after{width:180px;height:180px;right:-30px;top:32px;font-size:8px;opacity:.55}
+ .build-flow{grid-template-columns:repeat(2,1fr)}
+ .skills{grid-template-columns:1fr}
+}
+@media(max-width:390px){.wrap{width:calc(100% - 30px)}.build-flow{gap:8px}.step{padding:12px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>ASHFAAQ CURIMBACCUS</a>
+  <nav aria-label="Main navigation">
+   <a href="#about">ABOUT</a><a href="#experience">EXPERIENCE</a><a href="#projects">PROJECTS</a><a href="#skills">SKILLS</a><a href="#contact">CONTACT</a>
+  </nav>
+ </div>
+</header>
+
+<main class="wrap" id="top">
+ <div class="hero">
+  <div class="terminal">ashfaaq@auditor:~$ whoami</div>
+  <h1><span class="name">Ashfaaq Curimbaccus</span></h1>
+  <div class="role">IT Audit &amp; Technology Risk</div>
+  <p class="intro">IT Auditor at KPMG, focused on understanding technology environments, evaluating IT controls and helping organisations manage technology risk.</p>
+  <p class="subintro">I bring an analytical and technology-minded approach to audit — connecting business processes, systems, risks and controls to deliver clear, practical insights.</p>
+  <div class="actions">
+   <a class="btn primary" href="https://www.linkedin.com/in/acurimbaccus/" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a>
+   <a class="btn" href="mailto:ashfaaq.baccus@gmail.com">Email me</a>
+  </div>
+ </div>
+
+ <section id="build">
+  <div class="kicker">HOW I APPROACH IT AUDIT</div>
+  <div class="build-flow">
+   <div class="step"><span class="symbol">◉</span><strong>Understand</strong><span>Map processes, systems and stakeholders</span></div>
+   <div class="step"><span class="symbol">⌕</span><strong>Assess risk</strong><span>Identify risks and evaluate control design</span></div>
+   <div class="step"><span class="symbol">✓</span><strong>Test controls</strong><span>Review evidence and assess operating effectiveness</span></div>
+   <div class="step"><span class="symbol">↗</span><strong>Report &amp; improve</strong><span>Communicate findings and actionable recommendations</span></div>
+  </div>
+ </section>
+
+ <section id="about">
+  <div class="kicker">01</div>
+  <h2>About</h2>
+  <p class="muted" style="max-width:850px">I am an IT Audit professional at KPMG with experience across technology risk and control environments. My work involves understanding how business processes rely on technology, identifying risks within those environments, and evaluating whether relevant controls are appropriately designed and operating effectively.</p>
+  <p class="muted" style="max-width:850px">I enjoy working at the intersection of audit and technology. I am particularly interested in using data, automation and AI-enabled tools to make audit activities more organised, consistent and insightful — while keeping professional judgement and human review central to the process.</p>
+ </section>
+
+ <section id="experience">
+  <div class="kicker">02</div>
+  <h2>Experience</h2>
+  <div class="journey">
+   <article class="job">
+    <div class="job-meta">KPMG CANADA · CANADA</div>
+    <h3>IT Auditor · KPMG Canada</h3>
+    <ul>
+     <li>Evaluated IT systems for data integrity, security and compliance with internal policies and regulatory standards, maintaining a 98% compliance adherence rate across audited environments.</li>
+     <li>Conducted SAP system reviews covering user access, role design and transaction-level controls to assess alignment with governance and compliance requirements.</li>
+     <li>Assessed SOC 1 Type 2 reports, identifying control gaps and evaluating their impact on financial and operational processes.</li>
+     <li>Prepared audit reports on system configurations and control weaknesses, recommending improvements that enhanced data integrity and control effectiveness by 30%.</li>
+     <li>Used SQL and Excel to analyse datasets containing 500,000+ rows, identify audit findings and support data-driven corrective actions.</li>
+     <li>Executed General IT Controls (GITC) testing across authentication, access management, user provisioning and deprovisioning, periodic access reviews, privileged access, backups and physical security.</li>
+     <li>Improved audit efficiency by 40% through workflow optimisation, automation and streamlined testing procedures.</li>
+     <li>Monitored and validated change management processes, including approvals, documentation and segregation of duties for system changes.</li>
+     <li>Performed ongoing system and access monitoring, contributing to a 25% reduction in incidents through proactive risk identification and remediation.</li>
+     <li>Contributed to audit planning and delivery, including scoping, timeline development, stakeholder coordination and progress tracking.</li>
+    </ul>
+   </article>
+   <article class="job">
+    <div class="job-meta">KPMG MAURITIUS · MAURITIUS</div>
+    <h3>IT Auditor · KPMG Mauritius</h3>
+    <ul>
+     <li>Conducted risk assessments to identify potential IT-related risks within the organisation.</li>
+     <li>Evaluated the effectiveness of IT controls and recommended improvements.</li>
+     <li>Performed General IT Controls testing, including access controls, change management and computer operations.</li>
+     <li>Tested IT automated controls (ITAC) within business processes for a banking client.</li>
+     <li>Assessed IT infrastructure, applications, data management processes, incident response and disaster recovery plans.</li>
+     <li>Assessed the security of IT systems and networks.</li>
+     <li>Documented audit findings and prepared detailed reports with recommendations for improvement.</li>
+     <li>Communicated audit results to management and stakeholders, highlighting concerns and proposing corrective actions.</li>
+     <li>Recommended enhancements to internal controls to mitigate identified risks.</li>
+     <li>Collaborated with internal and external audit teams and management to understand business processes and risks.</li>
+     <li>Conducted walkthrough meetings with client stakeholders to understand key processes and the control mechanisms in place.</li>
+     <li>Reviewed existing IT processes to identify gaps and opportunities for process optimisation and efficiency.</li>
+    </ul>
+   </article>
+  </div>
+
+ </section>
+
+ <section id="projects">
+  <div class="kicker">03</div>
+  <h2>Selected work</h2>
+  <div class="work-list">
+   <article class="work">
+    <div class="work-meta">AI / AUDIT ENABLEMENT · MICROSOFT COPILOT</div>
+    <h3>AI agent for audit progress &amp; reporting</h3>
+    <p>Created an AI agent using Microsoft Copilot to support audit progress tracking and reporting. Designed to help organise engagement updates, consolidate progress information and assist with producing clear, consistent reporting for audit stakeholders.</p>
+   </article>
+   <article class="work">
+    <div class="work-meta">IDENTITY &amp; ACCESS · PRACTICAL LAB</div>
+    <h3>Active Directory Home Lab</h3>
+    <p>A practical learning environment exploring domain setup, users and groups, access administration and foundational identity and access management concepts.</p>
+   </article>
+   <article class="work">
+    <div class="work-meta">DATA / ANALYTICS</div>
+    <h3>Audit data analysis</h3>
+    <p>Excel and SQL exercises for filtering, reconciling and analysing datasets to support audit procedures and evidence-based conclusions.</p>
+   </article>
+
+  </div>
+ </section>
+
+ <section id="skills">
+  <div class="kicker">04</div>
+  <h2>Skills</h2>
+  <div class="skills">
+   <div class="skill-group"><h3>IT Audit &amp; Risk</h3><div class="tags"><span class="tag">IT Audit</span><span class="tag">IT General Controls</span><span class="tag">SOX</span><span class="tag">SOC 1</span><span class="tag">Risk Assessment</span><span class="tag">Control Testing</span><span class="tag">Audit Reporting</span><span class="tag">IT Application Controls</span><span class="tag">Remediation &amp; follow-up</span></div></div>
+   <div class="skill-group"><h3>Technology Controls</h3><div class="tags"><span class="tag">Access Management</span><span class="tag">Active Directory</span><span class="tag">Change Management</span><span class="tag">IT Operations</span><span class="tag">Incident Management</span><span class="tag">Evidence Review</span></div></div>
+   <div class="skill-group"><h3>Data &amp; Development</h3><div class="tags"><span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">Data Analysis</span></div></div>
+   <div class="skill-group"><h3>AI &amp; Productivity</h3><div class="tags"><span class="tag">Microsoft Copilot</span><span class="tag">AI Agents</span><span class="tag">Workflow Automation</span><span class="tag">Reporting</span></div></div>
+  </div>
+ </section>
+
+ <section id="contact">
+  <div class="kicker">05</div>
+  <h2>Let's talk shop</h2>
+  <p class="contact-line">Open to conversations about IT audit, technology risk, IT controls, audit innovation and the practical use of AI in audit workflows.</p>
+  <p class="contact-line">ashfaaq.baccus@gmail.com</p>
+  <p class="contact-line">Canada 🍁, Ontario, Mississauga</p>
+  <div class="actions">
+   <a class="btn" href="mailto:ashfaaq.baccus@gmail.com" target="_blank" rel="noopener noreferrer">Email ↗</a>
+   <a class="btn" href="https://www.linkedin.com/in/acurimbaccus/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+  </div>
+ </section>
+</main>
+<footer><div class="wrap">Ashfaaq Curimbaccus · IT Audit &amp; Technology Risk · Built with care.</div></footer>
+</body>
+</html>
